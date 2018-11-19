@@ -1,8 +1,7 @@
 # parse-path script
 
-## Essentially, a completely-automated script for Windows nodejs dev environments to produce a posix-compliant tree of the ```node_modules``` directory with slashes the right direction to simply copy-paste ```node_module``` locations for your projects:
-
-### (probably most useful for front-end web developers, but may have other applications)
+### Automated script for Windows nodejs dev environments to produce a posix-compliant tree of the ```node_modules``` directory with slashes the right direction to simply copy-paste ```node_module``` locations for your projects
+ (probably most useful for front-end web developers, but may have other applications)
 
 Assumption:  mingw64-git bash terminal for Windows, python 3, and nodejs with commands in $PATH installed for basic dev environment.
 
