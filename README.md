@@ -27,14 +27,14 @@ $ npm i module1 module2
 $ ./parse-path.sh
 ```
 
-It should generate a tree-view with full path names for your ```node_modules``` directory called ```tree.txt.posixpath``` and display it using ```less``` 
+It should generate a tree-view with full path names for your ```node_modules``` directory called ```tree.txt``` and display it using ```less``` 
 
 Obviously, you can edit the ```.sh``` script to have it open in ```notepad.exe```, ```subl.exe```, or ```code.exe```, etc. - something more Windows-friendly... or just open another bash terminal and keep the ```less``` display and copy from there.)
 
 For reference, here are the two scripts (they're very simple):
 
 ```bash
-tree -l 8 node_modules -d --fullpath --noreport -o tree.txt
+tree -l 8 node_modules --fullpath --noreport -o tree.txt
 python parse-path.py
 less tree.txt
 ```
@@ -46,7 +46,7 @@ import fileinput
 
 filename = "./tree.txt"
 open(filename).read()
-print("\n\tReplaced \\ with / and saved as "+ filename + ".posixpath")
+print("\n\tReplaced \\ with / and saved as "+ filename)
 with fileinput.FileInput(filename, inplace=True) as file:
     for str in file:
         print(str.replace('\\', '/'), end='')
