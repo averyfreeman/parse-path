@@ -2,7 +2,7 @@ import fileinput
 
 filename = "./tree.txt"
 open(filename).read()
-print("\n\tReplaced \\ with / and saved as "+ filename + ".posixpath")
+print("\n\tReplaced \\ with / and saved as "+ filename)
 with fileinput.FileInput(filename, inplace=True) as file:
     for str in file:
         print(str.replace('\\', '/'), end='')
